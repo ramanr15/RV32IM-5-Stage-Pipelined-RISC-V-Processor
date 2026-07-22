@@ -288,46 +288,48 @@ All user-specified timing constraints were met.
 
 ```text
 RV32IM-5-Stage-Pipelined-Processor/
-|
-|-- rtl/
-|   |-- rv32im_core.v
-|   |-- fetch_stage.v
-|   |-- decode_stage.v
-|   |-- execute_stage.v
-|   |-- memory_stage.v
-|   |-- writeback_stage.v
-|   |-- hazard_unit.v
-|   |-- forwarding_unit.v
-|   |-- alu.v
-|   |-- mul_div_unit.v
-|   |-- csr_unit.v
-|   |-- register_file.v
-|   |-- instruction_memory.v
-|   |-- data_memory.v
-|
-|-- simulation/
-|   |-- rv32im_core_tb.v
-|   |-- programs/
-|       |-- ecall_test.hex
-|       |-- illegal_instr_test.hex
-|       |-- forwarding_test.hex
-|       |-- load_use_test.hex
-|
-|-- constraints/
-|   |-- rv32im_core.xdc
-|
-|-- results/
-|   |-- waveform.png
-|   |-- simulation_results.png
-|   |-- timing_summary.png
-|   |-- utilization.png
-|   |-- power.png
-|
-|-- README.md
-|-- LICENSE
-|-- .gitignore
+│
+├── rtl/
+│   ├── ALU.v
+│   ├── Branch_predicting_unit.v
+│   ├── Branch_unit.v
+│   ├── Bypass_unit.v
+│   ├── CSR_unit.v
+│   ├── Control_unit.v
+│   ├── Data_memory.v
+│   ├── Decoder.v
+│   ├── Def.v
+│   ├── Exception_unit.v
+│   ├── Hazard_unit.v
+│   ├── Immediate_Generator.v
+│   ├── Instruction_memory.v
+│   ├── Load_unit.v
+│   ├── MulDiv_unit.v
+│   ├── Program_counter.v
+│   ├── Register_file.v
+│   ├── Store_unit.v
+│   ├── program.mem
+│   └── top_level_risc.v
+│
+├── simulation/
+│   └── tb_top_level_riscv.v
+│
+├── constraints/
+│   └── processor_32bit.xdc
+│
+├── results/
+│   ├── waveform1.png
+│   ├── simulation_results.txt
+│   ├── rtl_schematic.png
+│   ├── synthesized_schematic.png
+│   ├── timing_summary.png
+│   ├── utilization.png
+│   └── power.png
+│
+├── README.md
+├── LICENSE
+└── .gitignore
 ```
-
 ---
 
 ## How to Run
